@@ -16,7 +16,7 @@ BEGIN
 
 	IF booked_tables > 0 THEN
 		SELECT CONCAT("Table ", table_number, " is already booked") AS "Booking Status";
-		ELSE
+	ELSE
 		SELECT CONCAT("Table ", table_number, " is not booked") AS "Booking Status";
 	END IF;
 END //
