@@ -12,7 +12,7 @@ BEGIN
     DECLARE booked_tables INT DEFAULT 0;
 
 	SELECT COUNT(booked_tables) INTO booked_tables
-    FROM Bookings WHERE BookingDate = booking_date AND TableNumber = table_number;
+	FROM Bookings WHERE BookingDate = booking_date AND TableNumber = table_number;
 
 	IF booked_tables > 0 THEN
 		SELECT CONCAT("Table ", table_number, " is already booked") AS "Booking Status";
